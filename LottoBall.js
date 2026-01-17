@@ -15,6 +15,9 @@ export class LottoBall extends HTMLElement {
 
         const style = document.createElement('style');
         style.textContent = `
+            :host {
+                --ball-text-color: white;
+            }
             .ball {
                 width: 100%;
                 height: 100%;
@@ -24,7 +27,7 @@ export class LottoBall extends HTMLElement {
                 justify-content: center;
                 font-size: 1.8rem;
                 font-weight: bold;
-                color: white;
+                color: var(--ball-text-color);
                 text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
                 box-shadow: inset -5px -5px 10px rgba(0,0,0,0.3), 
                             inset 5px 5px 10px rgba(255,255,255,0.3);
